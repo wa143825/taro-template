@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3194207 */
+  src: url('iconfont.ttf?t=1648461200407') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-close:before {
+  content: "\e65b";
+}
+
+.i-auth:before {
+  content: "\e604";
+}
+
+.i-edit:before {
+  content: "\e624";
+}
+
+.i-deliver:before {
+  content: "\e608";
+}
+
+.i-arrow:before {
+  content: "\e631";
+}
+
+.i-double-arrow:before {
+  content: "\e656";
+}
+
+.i-coupon:before {
+  content: "\e634";
+}
+
+.i-mall:before {
+  content: "\e641";
+}
+
+.i-image:before {
+  content: "\e64a";
+}
+
+.i-mine:before {
+  content: "\e64e";
+}
+
+.i-category:before {
+  content: "\e660";
+}
+
+.i-home:before {
+  content: "\e663";
+}
+
+.i-call:before {
+  content: "\e671";
+}
+
+.i-correct:before {
+  content: "\e679";
+}
+
+.i-message:before {
+  content: "\e681";
+}
+
+.i-invoice:before {
+  content: "\e683";
+}
+
+.i-inventory:before {
+  content: "\e68c";
+}
+

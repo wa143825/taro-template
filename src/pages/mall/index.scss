@@ -1,0 +1,23 @@
+.coupon {
+  border: 2rpx solid #000;
+  width: 180rpx;
+  position: relative;
+}
+
+.coupon::after,
+.coupon::before {
+  content: "";
+  position: absolute;
+  height: 20rpx;
+  width: 20rpx;
+  border: 2px solid black;
+  top: 50%;
+}
+.coupon::before {
+  left: -2rpx;
+  border-left-color: white;
+}
+.coupon::after {
+  right: -2rpx;
+  border-right-color: white;
+}

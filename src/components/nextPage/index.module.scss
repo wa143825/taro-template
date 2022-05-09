@@ -1,0 +1,60 @@
+.next {
+  width: 100%;
+  color: #999;
+}
+@keyframes ani {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.ani {
+  animation: ani 0.2s;
+  padding: 0 30rpx;
+  text-align: center;
+}
+
+.noData {
+  color: #999;
+}
+.nextPage {
+  font-weight: bolder;
+  font-size: 28rpx;
+  color: #999;
+  transition: 0.2s all;
+}
+.end {
+  color: #999;
+}
+
+.nexPageHover {
+  color: #ccc;
+  transform: scale(0.95);
+}
+.loading {
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :global {
+    .at-activity-indicator__body {
+      margin-top: -5rpx;
+    }
+  }
+}
+
+.loading-white {
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :global {
+    .at-activity-indicator__content {
+      color: #fff !important;
+    }
+  }
+}

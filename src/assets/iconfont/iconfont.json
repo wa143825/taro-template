@@ -1,0 +1,128 @@
+{
+  "id": "3194207",
+  "name": "华奥",
+  "font_family": "iconfont",
+  "css_prefix_text": "i-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9080627",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "25153759",
+      "name": "auth",
+      "font_class": "auth",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "19030194",
+      "name": "Edit",
+      "font_class": "edit",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "1220301",
+      "name": "快递",
+      "font_class": "deliver",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "1526211",
+      "name": "更多",
+      "font_class": "arrow",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "848747",
+      "name": "more",
+      "font_class": "double-arrow",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "765744",
+      "name": "活动",
+      "font_class": "coupon",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "947474",
+      "name": "店铺",
+      "font_class": "mall",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "947484",
+      "name": "图片",
+      "font_class": "image",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "947489",
+      "name": "员工",
+      "font_class": "mine",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "949569",
+      "name": "商店",
+      "font_class": "category",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "949572",
+      "name": "首页",
+      "font_class": "home",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "972589",
+      "name": "电话",
+      "font_class": "call",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "1137783",
+      "name": "正确",
+      "font_class": "correct",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "1137799",
+      "name": "消息",
+      "font_class": "message",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "5809165",
+      "name": "发票",
+      "font_class": "invoice",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "5809186",
+      "name": "批量采购",
+      "font_class": "inventory",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
+    }
+  ]
+}
