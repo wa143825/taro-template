@@ -1,8 +1,8 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "huao",
-  "description": "",
-  "appid": "wx061acad4b7f20c40",
+  "projectname": "default",
+  "description": "default",
+  "appid": "",
   "setting": {
     "urlCheck": true,
     "es6": false,
