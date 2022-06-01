@@ -1,6 +1,6 @@
 <!--
  * @Author: Re_Vive
- * @LastEditTime: 2022-04-18 16:45:42
+ * @LastEditTime: 2022-06-01 16:53:26
  * @Description: 配置
 -->
 <div align="center">
@@ -28,15 +28,12 @@
 
 使用 taro 3.4.1 框架，完全使用 hooks 语法 + ts 语言进行编写，结合 windicss 做页面布局，目前只完成了自定义 tabbar 和 navbar，当然还是有不少需要完善的地方，后期项目开展过程中，讲将新的公共组件和函数等加入进来，持续维护这个模板，作为后面开发的基石。
 
+> app.config.ts里有自动读取pages的方法，会自动配置路由，不需要写一个页面配置一个页面
+
 # 二、安装方法
 
 ```
 // 安装依赖
-yarn / npm i
-
-// 安装插件的依赖（不知道什么原因，里面需要单独安装）
-cd node_modules/taro-plugin-wailwind
-cd ../.. （返回到项目根目录）
 yarn / npm i
 
 // 运行
@@ -52,9 +49,9 @@ yarn dev
 # 文件格式规范
 
 1. 相关业务文件应放在一个文件夹
-2. 尽量使用 windi，避免自己写 css
+2. 尽量(非必须)使用 windi，避免自己写 css
 3. 尽量抽离公共组件，方便下次使用
-4. 公共组件分为通用组件、个性化组件
+4. 公共组件分为通用组件(src/components)、个性化组件(pages/components)
 
 ## 引入顺序
 
@@ -92,6 +89,49 @@ yarn dev
 2. 与用户数据相关的页面做强制登陆操作，不需要强制登陆则做请登陆提示
 3. 动态全局数据都放在 store 里，并暴露出刷新方法【userInfo, refreshUserInfo】
 4. 静态全局信息放在 storage 里，并在`utils/local.ts`里写好存取方法，方便调用
+
+# 五、插件安装及编辑器设置
+推荐使用vscode来进行开发，为了配合代码格式，建议安装以下插件：
+1、ESLint
+2、EditorConfig
+3、Prettier
+4、koroFileHeader
+5、Document This
+
+编辑设置设置
+```
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": ["javascript", "javascriptreact", "html", "vue", "typescript"],
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "[typescriptreact, javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "prettier.jsxSingleQuote": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.printWidth": 150,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+
+  "fileheader.customMade": {
+    "Author": "Re_Vive",
+    "LastEditTime": "Do not edit",
+    "Description": "头部注释配置模板"
+  },
+
+  "docthis.dateTagFormat": "yyyy/mm/dd",
+  "docthis.includeDescriptionTag": true,
+```
 
 # 0、 目录树说明
 
