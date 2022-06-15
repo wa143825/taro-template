@@ -1,6 +1,6 @@
 <!--
  * @Author: Re_Vive
- * @LastEditTime: 2022-06-01 16:53:26
+ * @LastEditTime: 2022-06-15 14:50:11
  * @Description: 配置
 -->
 <div align="center">
@@ -28,7 +28,13 @@
 
 使用 taro 3.4.1 框架，完全使用 hooks 语法 + ts 语言进行编写，结合 windicss 做页面布局，目前只完成了自定义 tabbar 和 navbar，当然还是有不少需要完善的地方，后期项目开展过程中，讲将新的公共组件和函数等加入进来，持续维护这个模板，作为后面开发的基石。
 
-> app.config.ts里有自动读取pages的方法，会自动配置路由，不需要写一个页面配置一个页面
+## 项目说明
+
+> app.config.ts 里有自动读取 pages 的方法，会自动配置路由，不需要写一个页面配置一个页面
+
+1. 绝大部分页面都使用了 components/layout 作为布局页面
+2. 修改导航图标样式，都在 layout 里面修改
+3. layout 里写好了底部按钮，需要的话直接进行配置
 
 # 二、安装方法
 
@@ -91,14 +97,19 @@ yarn dev
 4. 静态全局信息放在 storage 里，并在`utils/local.ts`里写好存取方法，方便调用
 
 # 五、插件安装及编辑器设置
-推荐使用vscode来进行开发，为了配合代码格式，建议安装以下插件：
-1、ESLint
-2、EditorConfig
-3、Prettier
-4、koroFileHeader
-5、Document This
 
-编辑设置设置
+推荐使用 vscode 来进行开发，为了配合代码格式，建议安装以下插件：
+
+1. ESLint
+2. EditorConfig
+3. Prettier
+4. koroFileHeader
+5. Document This
+6. Color Highlight
+7. TODO Hightlight
+
+编辑设置
+
 ```
   "editor.quickSuggestions": {
     "strings": true
@@ -146,6 +157,8 @@ src
 |    ├─methods.ts
 |    └request.ts
 ├─store // 全局状态管理文件
+|   ├─user // 个人用户的状态
+|   ├─system // 全局设备信息等
 ├─pages // 所有页面放在pages里
 |   ├─login
 |   |   ├─components //页面内组件

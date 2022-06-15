@@ -1,33 +1,30 @@
-import Taro from "@tarojs/taro";
-import { useMemo } from "react";
-import { createModel } from "hox";
+import Taro from '@tarojs/taro'
+import { useMemo } from 'react'
+import { createModel } from 'hox'
 
-const data = Taro.getMenuButtonBoundingClientRect();
-const systemInfo = Taro.getSystemInfoSync();
+const data = Taro.getMenuButtonBoundingClientRect()
+const systemInfo = Taro.getSystemInfoSync()
 const actualRatio = systemInfo.screenWidth / 750
-const isIPhoneX = systemInfo.screenHeight !== systemInfo.safeArea.bottom;
-const iv = 15;
-
-
+const isIPhoneX = systemInfo.screenHeight !== systemInfo.safeArea.bottom
+const iv = 15
 
 type UseSystemType = {
-  tabbarH: number;
-  iv: number;
-  isPhoneX: boolean;
+  navbarH: number
+  iv: number
+  isPhoneX: boolean
   actualRatio: number
 } & Taro.getMenuButtonBoundingClientRect.Rect &
-  Taro.getSystemInfoSync.Result;
+  Taro.getSystemInfoSync.Result
 
 const useSystemModel = (): UseSystemType => {
-
   return useMemo(() => {
     return {
       ...data,
-      tabbarH: data.top + data.height + iv,
+      navbarH: data.top + data.height + iv,
       iv: iv,
       isPhoneX: isIPhoneX,
       actualRatio,
-      ...systemInfo
+      ...systemInfo,
     }
   }, [])
 }
