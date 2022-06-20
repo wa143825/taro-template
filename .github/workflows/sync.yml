@@ -11,12 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mirror the GitHub repos to Gitee
-        uses: Yikun/hub-mirror-action@v1.2
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
         with:
-          src: github/wa143825
-          dst: gitee/re_vive
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITEE_TOKEN }}
-          account_type: user
-          force_update: true
-          timeout: 300
+          source-repo: 'git@github.com:wa143825/taro-template.git'
+          destination-repo: 'git@gitee.com:re_vive/taro-template.git'
