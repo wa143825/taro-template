@@ -1,0 +1,22 @@
+name: sync2gitee
+
+on:
+  push:
+  schedule:
+    - cron: '1 17 * * *'
+
+jobs:
+  run:
+    name: Sync GitHub to Gitee
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror the GitHub repos to Gitee
+        uses: Yikun/hub-mirror-action@v1.2
+        with:
+          src: github/wa143825
+          dst: gitee/re_vive
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          account_type: user
+          force_update: true
+          timeout: 300
