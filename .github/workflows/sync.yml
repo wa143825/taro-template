@@ -7,13 +7,15 @@ on:
 
 jobs:
   run:
-    name: Sync GitHub to Gitee
     runs-on: ubuntu-latest
     steps:
-      - name: Mirror the GitHub repos to Gitee
-        uses: wearerequired/git-mirror-action@master
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+      - name: Sync GitHub to Gitee
+        uses: Yikun/hub-mirror-action@master
         with:
-          source-repo: 'git@github.com:wa143825/taro-template.git'
-          destination-repo: 'git@gitee.com:re_vive/taro-template.git'
+          src: 'github/wa143825'
+          dst: 'gitee/re_vive'
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: 'taro-template'
+          force_update: true
+          debug: true
