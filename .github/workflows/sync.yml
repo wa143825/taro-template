@@ -8,6 +8,7 @@ on:
 jobs:
   run:
     name: Sync GitHub to Gitee
+    runs-on: ubuntu-latest
     steps:
       - name: Mirror the GitHub repos to Gitee
         uses: Yikun/hub-mirror-action@v1.2
