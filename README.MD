@@ -1,6 +1,6 @@
 <!--
  * @Author: Re_Vive
- * @LastEditTime: 2022-06-15 14:50:11
+ * @LastEditTime: 2022-08-23 11:18:12
  * @Description: 配置
 -->
 <div align="center">
@@ -26,7 +26,7 @@
 
 # 一、简介
 
-使用 taro 3.4.1 框架，完全使用 hooks 语法 + ts 语言进行编写，结合 windicss 做页面布局，目前只完成了自定义 tabbar 和 navbar，当然还是有不少需要完善的地方，后期项目开展过程中，讲将新的公共组件和函数等加入进来，持续维护这个模板，作为后面开发的基石。
+使用 taro 3.5.3 框架，完全使用 hooks 语法 + ts 语言进行编写，结合 windicss 做页面布局，目前只完成了自定义 tabbar 和 navbar，当然还是有不少需要完善的地方，后期项目开展过程中，讲将新的公共组件和函数等加入进来，持续维护这个模板，作为后面开发的基石。
 
 ## 项目说明
 
@@ -106,7 +106,6 @@ yarn dev
 4. koroFileHeader
 5. Document This
 6. Color Highlight
-7. TODO Hightlight
 
 编辑设置
 
@@ -128,14 +127,14 @@ yarn dev
   },
 
   "prettier.jsxSingleQuote": true,
-  "prettier.jsxBracketSameLine": true,
+  "prettier.bracketSameLine": true,
   "prettier.printWidth": 150,
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
 
   "fileheader.customMade": {
-    "Author": "Re_Vive",
+    "Author": "[Your name]",
     "LastEditTime": "Do not edit",
     "Description": "头部注释配置模板"
   },
