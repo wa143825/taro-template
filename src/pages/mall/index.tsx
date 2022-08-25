@@ -3,7 +3,7 @@
  * @LastEditTime: 2022-06-15 14:52:32
  * @Description: 头部注释配置模板
  */
-import { FC } from '@tarojs/taro'
+import { FC } from 'react'
 import { View } from '@tarojs/components'
 
 import Layout from '@/components/layout'

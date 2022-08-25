@@ -1,34 +1,41 @@
-import Taro from '@tarojs/taro'
-import { useMemo } from 'react'
-import { createModel } from 'hox'
+/*
+ * @Author: Re_Vive
+ * @LastEditTime: 2022-08-25 17:28:45
+ * @Description: 头部注释配置模板
+ */
+import Taro, { getSystemInfoSync } from '@tarojs/taro'
+import { useState } from 'react'
+import { createGlobalStore } from 'hox'
 
 const data = Taro.getMenuButtonBoundingClientRect()
-const systemInfo = Taro.getSystemInfoSync()
+const systemInfo = getSystemInfoSync()
 const actualRatio = systemInfo.screenWidth / 750
-const isIPhoneX = systemInfo.screenHeight !== systemInfo.safeArea.bottom
+const isIPhoneX = systemInfo.screenHeight !== systemInfo.safeArea?.bottom
 const iv = 15
 
-type UseSystemType = {
+type TUseSystemType = {
   navbarH: number
   iv: number
   isPhoneX: boolean
   actualRatio: number
+
+  tabIdx: number
+  sTabIdx: any
 } & Taro.getMenuButtonBoundingClientRect.Rect &
   Taro.getSystemInfoSync.Result
 
-const useSystemModel = (): UseSystemType => {
-  return useMemo(() => {
-    return {
-      ...data,
-      navbarH: data.top + data.height + iv,
-      iv: iv,
-      isPhoneX: isIPhoneX,
-      actualRatio,
-      ...systemInfo,
-    }
-  }, [])
-}
+export const [useSysStore, SysStoreProvider] = createGlobalStore<TUseSystemType>(() => {
+  const [tabIdx, sTabIdx] = useState(0)
 
-const useSystem = createModel(useSystemModel)
+  return {
+    ...data,
+    navbarH: data.top + data.height + iv,
+    iv: iv,
+    isPhoneX: isIPhoneX,
+    actualRatio,
+    ...systemInfo,
 
-export default useSystem
+    tabIdx,
+    sTabIdx,
+  }
+})

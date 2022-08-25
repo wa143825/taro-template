@@ -1,10 +1,14 @@
-import { FC } from '@tarojs/taro'
-import { ReactElement } from 'react'
+/*
+ * @Author: Re_Vive
+ * @LastEditTime: 2022-08-25 17:36:02
+ * @Description: 头部注释配置模板
+ */
+import { ReactElement, FC } from 'react'
 import { View, ScrollView } from '@tarojs/components'
 import Tabbar, { IItem } from '@/components/tarbar'
 import NavBar, { INavBar } from '@/components/navbar'
 
-import useSystem from '@/store/system'
+import { useSysStore } from '@/store/system'
 
 interface IScorll {
   loading?: boolean
@@ -51,7 +55,7 @@ const tabList: IItem[] = [
 ]
 
 const Layout: FC<ILayout> = ({ children, navConfig, scrollConfig, hasTabbar, hasNavbar, btmHandle }) => {
-  const { navbarH, screenHeight, actualRatio, isPhoneX } = useSystem()
+  const { navbarH, screenHeight, actualRatio, isPhoneX } = useSysStore()
 
   const { title, fontColor, bgColor, bgUrl, hasBack } = navConfig
 

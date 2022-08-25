@@ -1,4 +1,9 @@
-import { FC } from '@tarojs/taro'
+/*
+ * @Author: Re_Vive
+ * @LastEditTime: 2022-08-25 17:31:48
+ * @Description: 头部注释配置模板
+ */
+import { FC } from 'react'
 import { View } from '@tarojs/components'
 import Layout from '@/components/layout'
 

@@ -1,13 +1,11 @@
 /*
  * @Author: Re_Vive
- * @LastEditTime: 2022-05-09 16:14:49
+ * @LastEditTime: 2022-08-25 17:32:27
  * @Description: 头部注释配置模板
  */
-import { FC } from '@tarojs/taro'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, FC } from 'react'
 import { View, Image, ScrollView } from '@tarojs/components'
-import { AtTabs, AtTabsPane } from 'taro-ui'
-import useSystem from '@/store/system'
+import { useSysStore } from '@/store/system'
 import NextPage from '@/components/nextPage'
 import { usePaging } from '@/hooks/paging'
 import { ArticleCate, ArticleList } from '@/api/article'
@@ -21,7 +19,7 @@ interface ITab {
 }
 
 const Index: FC = () => {
-  const { navbarH, screenHeight, actualRatio } = useSystem()
+  const { navbarH, screenHeight, actualRatio } = useSysStore()
 
   const cur = useRef(0)
   const [tablist, sTablist] = useState<ITab[]>([{ id: -1, title: '全部' }])

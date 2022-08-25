@@ -1,12 +1,12 @@
 /*
  * @Author: Re_Vive
- * @LastEditTime: 2022-04-27 16:00:05
+ * @LastEditTime: 2022-08-25 17:34:16
  * @Description: 导航条
  */
-import Taro, { FC } from '@tarojs/taro'
+import Taro from '@tarojs/taro'
 import { Image, View, Text } from '@tarojs/components'
-import { useMemo } from 'react'
-import useSystem from '@/store/system'
+import { useMemo, FC } from 'react'
+import { useSysStore } from '@/store/system'
 
 export interface INavBar {
   title?: string
@@ -26,9 +26,9 @@ export interface INavBar {
  * @param hasBack 是否需要返回键
  */
 const NavBar: FC<INavBar> = ({ title, bgUrl, fontColor, bgColor, hasBack }) => {
-  const system = useSystem()
+  const { navbarH, top, iv, height } = useSysStore()
   return useMemo(() => {
-    const customH = system.height
+    const customH = height
     const fontSize = customH / 2
 
     const goBack = () => {
@@ -36,8 +36,8 @@ const NavBar: FC<INavBar> = ({ title, bgUrl, fontColor, bgColor, hasBack }) => {
     }
 
     return (
-      <View style={{ height: system.navbarH, background: bgColor }}>
-        <View className="pl-25rpx font-bold" style={{ paddingTop: system.top, height: customH, paddingBottom: system.iv, backgroundColor: bgColor }}>
+      <View style={{ height: navbarH, background: bgColor }}>
+        <View className="pl-25rpx font-bold" style={{ paddingTop: top, height: customH, paddingBottom: iv, backgroundColor: bgColor }}>
           <View className="flex items-center" style={{ color: fontColor, fontSize }}>
             {hasBack && (
               <Text
@@ -61,7 +61,7 @@ const NavBar: FC<INavBar> = ({ title, bgUrl, fontColor, bgColor, hasBack }) => {
         </View>
       </View>
     )
-  }, [system, title])
+  }, [title])
 }
 
 NavBar.defaultProps = {
